@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0" version="29.6.3">
+  <diagram name="Page-1" id="_EHxqJ60R3zfz42G97Wr">
+    <mxGraphModel dx="2319" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="DimCustomer&lt;div&gt;------------------------------------------------------&lt;br&gt;&lt;div&gt;&lt;div&gt;PK CustomerKey INT&lt;/div&gt;&lt;div&gt;CustomerID NVARCHAR(10)&lt;/div&gt;&lt;div&gt;CompanyName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;ContactName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;City NVARCHAR(50)&lt;/div&gt;&lt;div&gt;Country NVARCHAR(50)&lt;/div&gt;&lt;div&gt;CustomerSegment NVARCHAR(50)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="220" x="-160" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-5" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="DimProduct&lt;div&gt;------------------------------------------------------&lt;/div&gt;&lt;div&gt;&lt;div&gt;PK ProductKey INT&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ProductID INT&lt;/span&gt;&lt;/div&gt;&lt;div&gt;ProductName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;CategoryName NVARCHAR(100)&lt;/div&gt;&lt;div&gt;UnitPrice DECIMAL(10,2)&lt;/div&gt;&lt;div&gt;Discontinued BIT&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;CostPrice DECIMAL(10,2)&lt;/div&gt;&lt;div&gt;CountryOfOrigin NVARCHAR(50)&lt;/div&gt;&lt;div&gt;SupplierProductCode NVARCHAR(50)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="220" x="520" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-6" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="DimDate&lt;div&gt;------------------------------------------------------&lt;/div&gt;&lt;div&gt;&lt;div&gt;PK DateKey INT&lt;/div&gt;&lt;div&gt;FullDate DATE&lt;/div&gt;&lt;div&gt;Year INT&lt;/div&gt;&lt;div&gt;Quarter INT&lt;/div&gt;&lt;div&gt;Month INT&lt;/div&gt;&lt;div&gt;MonthName NVARCHAR(20)&lt;/div&gt;&lt;div&gt;Week INT&lt;br&gt;DayOfMonth INT&lt;br&gt;DayName NVARCHAR(20)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="220" x="180" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-7" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="FactSales&lt;div&gt;------------------------------------------------------&lt;/div&gt;&lt;div&gt;&lt;div&gt;PK SalesKey INT&lt;/div&gt;&lt;div&gt;OrderID INT&lt;/div&gt;&lt;div&gt;CustomerKey INT FK&lt;/div&gt;&lt;div&gt;ProductKey INT FK&lt;/div&gt;&lt;div&gt;DateKey INT FK&lt;/div&gt;&lt;div&gt;Quantity INT&lt;/div&gt;&lt;div&gt;UnitPrice DECIMAL(10,2)&lt;/div&gt;&lt;div&gt;Discount DECIMAL(5,2)&lt;/div&gt;&lt;div&gt;TotalAmount DECIMAL(10,2)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="220" x="180" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-27" edge="1" parent="1" source="DCGL2HXdqRNtF4T9lKAw-6" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="DCGL2HXdqRNtF4T9lKAw-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="390" as="sourcePoint" />
+            <mxPoint x="290" y="410.71067811865476" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="250" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;*&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="245" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-31" edge="1" parent="1" source="DCGL2HXdqRNtF4T9lKAw-1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="DCGL2HXdqRNtF4T9lKAw-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="60" y="600" as="sourcePoint" />
+            <mxPoint x="130.71067811865476" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;1 *&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="80" x="80" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-33" edge="1" parent="1" source="DCGL2HXdqRNtF4T9lKAw-7" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="DCGL2HXdqRNtF4T9lKAw-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="600" as="sourcePoint" />
+            <mxPoint x="470.71067811865476" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DCGL2HXdqRNtF4T9lKAw-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;* 1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="430" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
